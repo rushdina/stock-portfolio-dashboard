@@ -31,7 +31,7 @@ describe("StockItem component", () => {
   });
 
   // Test 2: Render plus sign for profit
-  it("calculates profit correctly with + sign", () => {
+  it("displays profit with plus sign", () => {
     const stock = {
       id: "1",
       symbol: "AAPL",
