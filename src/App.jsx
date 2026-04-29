@@ -20,8 +20,8 @@ function App() {
     [stocks, fetchStockData, addOrMergeStock, updateStockPrice],
   );
 
-  // useMemo helps keep the context value reference stable.
-  // Without it, a new value object is created on every render,
+  // useMemo keeps the context value reference stable between renders.
+  // Without it, the Provider value object would be recreated on every render,
   // which can cause all context consumers to re-render unnecessarily.
   return (
     <StockContext.Provider value={contextValue}>
