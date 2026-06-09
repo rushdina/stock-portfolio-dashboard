@@ -6,7 +6,7 @@ A React-based Stock Portfolio Dashboard that allows users to track stock investm
 
 🔗 View app: https://rushdina.github.io/stock-portfolio-dashboard/
 
-![Stock Portfolio Dashboard Preview](./src/assets/screenshot-financeDashboard.png)
+![Stock Portfolio Dashboard Preview](./src/assets/preview-stock-portfolio-dashboard.png)
 
 ## 🛠️ Technologies Used
 
