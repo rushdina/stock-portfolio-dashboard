@@ -91,7 +91,7 @@ export default function StockForm() {
         className="container"
         aria-describedby={apiError ? "form-api-error" : undefined}
       >
-        <h1 className="dashboard-heading">Finance Dashboard</h1>
+        <h1 className="dashboard-heading">Stock Portfolio Dashboard</h1>
 
         <form
           className="stock-form"
