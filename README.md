@@ -1,4 +1,4 @@
-# 💹 Stock Portfolio Dashboard
+# 💹 Stock Portfolio Finance Dashboard
 
 A React-based Stock Portfolio Dashboard that allows users to track stock investments. Users can add stocks with quantity and purchase price, fetch real-time market prices using the `Alpha Vantage API`, and view profit or loss dynamically.
 
