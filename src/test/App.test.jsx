@@ -11,13 +11,13 @@ describe("App component", () => {
     // Act: No additional actions needed
     // Assert:
     expect(
-      screen.getByRole("heading", { level: 1, name: /Finance Dashboard/i }),
+      screen.getByRole("heading", { level: 1, name: /Stock Portfolio Dashboard/i }),
     ).toBeInTheDocument(); // StockForm heading <h1>
 
     expect(
       screen.getByRole("heading", { level: 2, name: /Stock List/i }),
     ).toBeInTheDocument(); // StockList heading <h2>
 
-    expect(screen.getByText(/© 2026 Finance Dashboard/i)).toBeInTheDocument(); // Footer
+    expect(screen.getByText(/© 2026 Stock Portfolio Dashboard/i)).toBeInTheDocument(); // Footer
   });
 });
