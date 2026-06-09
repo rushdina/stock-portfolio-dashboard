@@ -27,7 +27,7 @@ function App() {
     <StockContext.Provider value={contextValue}>
       <StockForm />
       <StockList />
-      <footer>&copy; 2026 Finance Dashboard</footer>
+      <footer>&copy; 2026 Stock Portfolio Dashboard</footer>
     </StockContext.Provider>
   );
 }
