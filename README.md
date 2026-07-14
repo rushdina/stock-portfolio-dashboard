@@ -45,25 +45,21 @@ This separation improves maintainability, reusability, and scalability.
 
 ## 🧠 Key Challenges & Solutions
 
-**1. Shared State Management**  
-Managing stock data across multiple components led to duplicated logic.  
-**Solution:** Centralised state and business logic using a custom hook (`useStocks`) with Context API.
+**1. API Response Validation**  
+The REST API could return invalid symbols, rate limits, incomplete data, or network errors.
+**Solution:** Validated every API response and returned consistent success or error states for reliable data handling and user feedback.
 
-**2. Unnecessary Re-renders with Context**  
-Context updates caused all consumers to re-render.  
-**Solution:** Optimised provider value using `useMemo` and stabilised functions with `useCallback`.
+**2. Merging Duplicate Stock Holdings**  
+Users could purchase the same stock multiple times at different prices and quantities.
+**Solution:** Merged duplicate holdings using weighted average purchase price calculations to maintain accurate portfolio data.
 
-**3. Scalable Code Structure**  
-Tightly coupled API, state, and UI logic reduced maintainability.  
-**Solution:** Refactored into modular layers (custom hook, API service, utility functions).
+**3. Shared Portfolio State**  
+Multiple components needed access to the same portfolio data and operations.
+**Solution:** Centralised portfolio state and business logic in a custom hook and shared it through Context API.
 
-**4. API Reliability & Edge Cases**  
-Handling rate limits, invalid symbols, and network errors.  
-**Solution:** Implemented structured error handling with consistent response states and UI feedback.
-
-**5. Testing Modularised Architecture**  
-Refactoring introduced multiple logic layers to test.  
-**Solution:** Adopted layered testing (components, hooks, utilities, API with mocks).
+**4. Testing Asynchronous Components**  
+Components depended on shared state, asynchronous API requests, and React state updates. 
+**Solution:** Mocked Context values and API responses to independently test components, business logic, and error handling.
 
 ## ✨ Improvements Beyond Baseline Requirements
 
@@ -82,11 +78,11 @@ Refactoring introduced multiple logic layers to test.
 
 ## 📚 Key Learnings
 
-- Designed scalable frontend architecture using custom hooks, `Context API`, and modular layers
-- Improved understanding of React rendering behaviour and performance optimisation (`useMemo`, `useCallback`)
-- Built reusable component-based UI with clear separation of concerns
-- Implemented structured error handling for real-world API constraints (rate limits, invalid data, network failures)
-- Applied layered testing strategies across components, hooks, utilities, and API using `Vitest` and `React Testing Library`
+- Designed a modular React architecture by separating UI, state management, API communication, and business logic into reusable modules.
+- Learned to validate and handle unpredictable REST API responses, including invalid data, rate limits, and network failures.
+- Applied Context API and custom hooks to centralise shared portfolio state and create a single source of truth.
+- Implemented automated unit and component tests using Vitest and React Testing Library to verify business logic, user interactions, and edge cases.
+- Integrated automated testing into a GitHub Actions CI/CD pipeline to verify code quality before every production build and deployment.
 
 ## 💻 Installation & Running Locally
 
