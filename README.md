@@ -46,24 +46,20 @@ This separation improves maintainability, reusability, and scalability.
 ## 🧠 Key Challenges & Solutions
 
 **1. API Response Validation**  
-
 The REST API could return invalid symbols, rate limits, incomplete data, or network errors.
-**Solution:** Validated every API response and returned consistent success or error states for reliable data handling and user feedback.
+- **Solution:** Validated every API response and returned consistent success or error states for reliable data handling and user feedback.
 
 **2. Merging Duplicate Stock Holdings**  
-
 Users could purchase the same stock multiple times at different prices and quantities.
-**Solution:** Merged duplicate holdings using weighted average purchase price calculations to maintain accurate portfolio data.
+- **Solution:** Merged duplicate holdings using weighted average purchase price calculations to maintain accurate portfolio data.
 
 **3. Shared Portfolio State**  
-
 Multiple components needed access to the same portfolio data and operations.
-**Solution:** Centralised portfolio state and business logic in a custom hook and shared it through Context API.
+- **Solution:** Centralised portfolio state and business logic in a custom hook and shared it through Context API.
 
 **4. Testing Asynchronous Components**  
-
 Components depended on shared state, asynchronous API requests, and React state updates. 
-**Solution:** Mocked Context values and API responses to independently test components, business logic, and error handling.
+- **Solution:** Mocked Context values and API responses to independently test components, business logic, and error handling.
 
 ## ✨ Improvements Beyond Baseline Requirements
 
